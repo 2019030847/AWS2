@@ -1,5 +1,12 @@
 const express = require("express");
+const dbContactos = require('../models/contactos.js');
 const router = express.Router();
+const mysql = require("mysql");
+
+//dbContactos.Contactos.insertar({nombre:'Johana',domicilio:'El Zapote', telefono:'6692202109'})
+//dbContactos.Contactos.mostrarTodos();
+//dbContactos.Contactos.buscarId(1);
+dbContactos.Contactos.borrar(1);
 
 router.get('/',(req,res)=>{
     res.send("Iniciamos Servidor");
